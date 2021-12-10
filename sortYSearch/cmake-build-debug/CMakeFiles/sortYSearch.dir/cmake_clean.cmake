@@ -1,5 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/sortYSearch.dir/main.cpp.obj"
+  "CMakeFiles/sortYSearch.dir/otrosAlgoritmos.cpp.obj"
   "CMakeFiles/sortYSearch.dir/search.cpp.obj"
   "CMakeFiles/sortYSearch.dir/sorts.cpp.obj"
   "libsortYSearch.dll.a"

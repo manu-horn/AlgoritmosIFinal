@@ -56,10 +56,10 @@ RM = "C:\Program Files\JetBrains\CLion 2021.2\bin\cmake\win\bin\cmake.exe" -E rm
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "C:\Users\Grypho\Desktop\Exactas\LCD\2C 2021\Algo I\Labo\C++\sortYSearch"
+CMAKE_SOURCE_DIR = "C:\Users\Grypho\Desktop\Exactas\LCD\2C 2021\Algo I\Labo\C++\AlgoritmosIFinal\sortYSearch"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "C:\Users\Grypho\Desktop\Exactas\LCD\2C 2021\Algo I\Labo\C++\sortYSearch\cmake-build-debug"
+CMAKE_BINARY_DIR = "C:\Users\Grypho\Desktop\Exactas\LCD\2C 2021\Algo I\Labo\C++\AlgoritmosIFinal\sortYSearch\cmake-build-debug"
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -86,9 +86,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\Grypho\Desktop\Exactas\LCD\2C 2021\Algo I\Labo\C++\sortYSearch\cmake-build-debug\CMakeFiles" "C:\Users\Grypho\Desktop\Exactas\LCD\2C 2021\Algo I\Labo\C++\sortYSearch\cmake-build-debug\\CMakeFiles\progress.marks"
+	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\Grypho\Desktop\Exactas\LCD\2C 2021\Algo I\Labo\C++\AlgoritmosIFinal\sortYSearch\cmake-build-debug\CMakeFiles" "C:\Users\Grypho\Desktop\Exactas\LCD\2C 2021\Algo I\Labo\C++\AlgoritmosIFinal\sortYSearch\cmake-build-debug\\CMakeFiles\progress.marks"
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\Grypho\Desktop\Exactas\LCD\2C 2021\Algo I\Labo\C++\sortYSearch\cmake-build-debug\CMakeFiles" 0
+	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\Grypho\Desktop\Exactas\LCD\2C 2021\Algo I\Labo\C++\AlgoritmosIFinal\sortYSearch\cmake-build-debug\CMakeFiles" 0
 .PHONY : all
 
 # The main clean target
@@ -152,6 +152,30 @@ main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\sortYSearch.dir\build.make CMakeFiles/sortYSearch.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+otrosAlgoritmos.obj: otrosAlgoritmos.cpp.obj
+.PHONY : otrosAlgoritmos.obj
+
+# target to build an object file
+otrosAlgoritmos.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\sortYSearch.dir\build.make CMakeFiles/sortYSearch.dir/otrosAlgoritmos.cpp.obj
+.PHONY : otrosAlgoritmos.cpp.obj
+
+otrosAlgoritmos.i: otrosAlgoritmos.cpp.i
+.PHONY : otrosAlgoritmos.i
+
+# target to preprocess a source file
+otrosAlgoritmos.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\sortYSearch.dir\build.make CMakeFiles/sortYSearch.dir/otrosAlgoritmos.cpp.i
+.PHONY : otrosAlgoritmos.cpp.i
+
+otrosAlgoritmos.s: otrosAlgoritmos.cpp.s
+.PHONY : otrosAlgoritmos.s
+
+# target to generate assembly for a file
+otrosAlgoritmos.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\sortYSearch.dir\build.make CMakeFiles/sortYSearch.dir/otrosAlgoritmos.cpp.s
+.PHONY : otrosAlgoritmos.cpp.s
+
 search.obj: search.cpp.obj
 .PHONY : search.obj
 
@@ -212,6 +236,9 @@ help:
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
+	@echo ... otrosAlgoritmos.obj
+	@echo ... otrosAlgoritmos.i
+	@echo ... otrosAlgoritmos.s
 	@echo ... search.obj
 	@echo ... search.i
 	@echo ... search.s

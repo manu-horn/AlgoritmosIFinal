@@ -7,4 +7,6 @@ add_executable(sortYSearch main.cpp
         sorts.cpp
         sorts.h
         search.cpp
-        search.h)
+        search.h
+        otrosAlgoritmos.cpp
+        otrosAlgoritmos.h)

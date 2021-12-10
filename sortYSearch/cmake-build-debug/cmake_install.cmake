@@ -1,4 +1,4 @@
-# Install script for directory: C:/Users/Grypho/Desktop/Exactas/LCD/2C 2021/Algo I/Labo/C++/sortYSearch
+# Install script for directory: C:/Users/Grypho/Desktop/Exactas/LCD/2C 2021/Algo I/Labo/C++/AlgoritmosIFinal/sortYSearch
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "C:/Users/Grypho/Desktop/Exactas/LCD/2C 2021/Algo I/Labo/C++/sortYSearch/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "C:/Users/Grypho/Desktop/Exactas/LCD/2C 2021/Algo I/Labo/C++/AlgoritmosIFinal/sortYSearch/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

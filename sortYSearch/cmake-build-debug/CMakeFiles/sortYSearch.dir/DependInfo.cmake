@@ -8,9 +8,10 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "C:/Users/Grypho/Desktop/Exactas/LCD/2C 2021/Algo I/Labo/C++/sortYSearch/main.cpp" "C:/Users/Grypho/Desktop/Exactas/LCD/2C 2021/Algo I/Labo/C++/sortYSearch/cmake-build-debug/CMakeFiles/sortYSearch.dir/main.cpp.obj"
-  "C:/Users/Grypho/Desktop/Exactas/LCD/2C 2021/Algo I/Labo/C++/sortYSearch/search.cpp" "C:/Users/Grypho/Desktop/Exactas/LCD/2C 2021/Algo I/Labo/C++/sortYSearch/cmake-build-debug/CMakeFiles/sortYSearch.dir/search.cpp.obj"
-  "C:/Users/Grypho/Desktop/Exactas/LCD/2C 2021/Algo I/Labo/C++/sortYSearch/sorts.cpp" "C:/Users/Grypho/Desktop/Exactas/LCD/2C 2021/Algo I/Labo/C++/sortYSearch/cmake-build-debug/CMakeFiles/sortYSearch.dir/sorts.cpp.obj"
+  "C:/Users/Grypho/Desktop/Exactas/LCD/2C 2021/Algo I/Labo/C++/AlgoritmosIFinal/sortYSearch/main.cpp" "C:/Users/Grypho/Desktop/Exactas/LCD/2C 2021/Algo I/Labo/C++/AlgoritmosIFinal/sortYSearch/cmake-build-debug/CMakeFiles/sortYSearch.dir/main.cpp.obj"
+  "C:/Users/Grypho/Desktop/Exactas/LCD/2C 2021/Algo I/Labo/C++/AlgoritmosIFinal/sortYSearch/otrosAlgoritmos.cpp" "C:/Users/Grypho/Desktop/Exactas/LCD/2C 2021/Algo I/Labo/C++/AlgoritmosIFinal/sortYSearch/cmake-build-debug/CMakeFiles/sortYSearch.dir/otrosAlgoritmos.cpp.obj"
+  "C:/Users/Grypho/Desktop/Exactas/LCD/2C 2021/Algo I/Labo/C++/AlgoritmosIFinal/sortYSearch/search.cpp" "C:/Users/Grypho/Desktop/Exactas/LCD/2C 2021/Algo I/Labo/C++/AlgoritmosIFinal/sortYSearch/cmake-build-debug/CMakeFiles/sortYSearch.dir/search.cpp.obj"
+  "C:/Users/Grypho/Desktop/Exactas/LCD/2C 2021/Algo I/Labo/C++/AlgoritmosIFinal/sortYSearch/sorts.cpp" "C:/Users/Grypho/Desktop/Exactas/LCD/2C 2021/Algo I/Labo/C++/AlgoritmosIFinal/sortYSearch/cmake-build-debug/CMakeFiles/sortYSearch.dir/sorts.cpp.obj"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

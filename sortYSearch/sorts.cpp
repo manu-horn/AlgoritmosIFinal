@@ -6,7 +6,7 @@
 
 // cocktail & cocktailShaker
 
-void cocktailSort(vector<int>& v){
+void cocktailSort(vector<int>& v){ // O(n^2), n = |v|
     for (int i = 0; i < v.size()/2; ++i) {
         swap(v[i], v[posMinimoEnRango(v,i,v.size()-1-i)]);
         swap(v[v.size()-1-i], v[posMaximoEnRango(v, i, v.size()-1-i)]);
@@ -35,7 +35,7 @@ void cocktailShakerSort(vector<int>& v){
     }
 }
 
-int posMinimoEnRango(vector<int> v, int low, int high){
+int posMinimoEnRango(vector<int> v, int low, int high){ // O(n), n = |v|
     int posMin = low;
 
     for (int i = low; i <= high; ++i) {
@@ -45,7 +45,7 @@ int posMinimoEnRango(vector<int> v, int low, int high){
     return posMin;
 }
 
-int posMaximoEnRango(vector<int> v, int low, int high){
+int posMaximoEnRango(vector<int> v, int low, int high){ // O(n), n = |v|
     int posMax = low;
 
     for (int i = low; i <= high; ++i) {
@@ -59,7 +59,7 @@ int posMaximoEnRango(vector<int> v, int low, int high){
 // counting
 
 vector<int> countingSort(vector<int> s){
-    vector<int> conteo = contarApariciones(s);
+    vector<int> conteo = contarApariciones(s); // O(n)
     vector<int> ordenado;
 
     for (int i = 0; i < conteo.size() ; ++i) {
@@ -71,7 +71,7 @@ vector<int> countingSort(vector<int> s){
     return ordenado;
 }
 
-vector<int> contarApariciones (vector<int> s){ // para counting sort
+vector<int> contarApariciones (vector<int> s){ // para counting sort //O(n), n = |s|
     vector<int> c (s.size()); //acoto: a lo sumo hay s.size() elementos distintos
 
     for (int i = 0; i < s.size(); ++i) {
@@ -83,7 +83,7 @@ vector<int> contarApariciones (vector<int> s){ // para counting sort
 
 // selection
 
-void selectionSort(vector<int>& s){ // posMinimoEnRango está arriba
+void selectionSort(vector<int>& s){ // posMinimoEnRango está arriba // O(n^2)
     for (int i = 0; i < s.size()-1; ++i) {
         int minPos = posMinimoEnRango(s, i, s.size()-1);
         swap(s[i], s[minPos]);
@@ -92,12 +92,12 @@ void selectionSort(vector<int>& s){ // posMinimoEnRango está arriba
 
 // insertion
 
-void insertionSort(vector<int>& s){
+void insertionSort(vector<int>& s){ //O(n^2)
     for (int i = 0; i < s.size(); ++i) {
        insert(s, i);
     }
 }
-void insert(vector<int>& s, int i){
+void insert(vector<int>& s, int i){ //O(n)
     for (int j = i; j > 0 && s[j] < s[j-1]; --j) {
         swap(s[j], s[j-1]);
     }
@@ -105,12 +105,12 @@ void insert(vector<int>& s, int i){
 
 // bubble
 
-void bubbleSort(vector<int>& s){
+void bubbleSort(vector<int>& s){ //O(n^2)
     for (int i = 0; i < s.size(); ++i) {
         burbujeo(s,i);
     }
 }
-void burbujeo(vector<int>& s, int i){
+void burbujeo(vector<int>& s, int i){ //O(n)
     for (int j = s.size()-1; j > i ; --j) {
         if (s[j] < s[j-1]) swap(s[j], s[j-1]);
     }

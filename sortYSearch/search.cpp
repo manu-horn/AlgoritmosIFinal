@@ -18,7 +18,7 @@ bool linearSearch(int e, vector<int> s){
 }
 
 int binarySearch(int x, vector<int> v){
-    int low = 0, high = v.size();
+    int low = 0, high = v.size()-1;
 
     while (low < high){
         int mid = (low + high)/2;

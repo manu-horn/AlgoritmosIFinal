@@ -1,0 +1,36 @@
+Merge de secuencias // 
+
+1-
+
+(j >= b.size()) || (i < a.size() && a[i] < b[j]) 
+
+neg (1): 
+
+(j < b.size()) && (i >= a.size() || a[i] >= b[j])
+
+
+vamos a probar de la otra forma
+
+2-
+
+(i < a.size()) && (j >= b.size() || a[i] <= b[j])
+
+neg (2):
+
+(i >= a.size()) || (j < b.size() && a[i] > b[j])
+
+
+1 <---> neg (2)  } no son equivalentes, solo son
+                 } dos versiones de la condición del if
+2 <---> neg (1)  } una con i y la otra con j
+
+me gusta mas usar para el if dentro del ciclo
+
+if (neg(1)){...}
+else {...} (acá iría 1, xq tenemos neg(neg(1)) = 1)
+
+
+
+
+
+

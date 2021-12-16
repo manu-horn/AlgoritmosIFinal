@@ -15,12 +15,12 @@ vector<int> merge(vector<int>& a, vector<int>& b){
     int i = 0, j = 0;
 
     for (int k = 0; k < c.size(); ++k) {
-        if ((j >= b.size()) || (i < a.size() && a[i] < b[j])){
-            c[k] = a[i];
-            i++;
-        } else {
+        if (j < b.size() && (i >= a.size() || a[i] >= b[j])){
             c[k] = b[j];
             j++;
+        } else {
+            c[k] = a[i];
+            i++;
         }
     }
 
@@ -59,11 +59,11 @@ void crook(vector<int>& a, vector<int>& b, vector<int>& c, int& i, int& j, int& 
  * calcular_pi(auxiliar): O(n) = O(|p|)
  */
 
-bool matches(string& t, int i, string& p){
+bool matches(string& t, int i, string& p){ // auxiliar para 'contiene'
     int k = 0;
     while (k < p.size() && t[i+k] == p[k]){
         k++;
-    }
+    } // el parámetro i es usado para el ciclo de 'contiene'
 
     return k == p.size();
 }

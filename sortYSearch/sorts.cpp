@@ -72,7 +72,7 @@ vector<int> countingSort(vector<int> s){
 }
 
 vector<int> contarApariciones (vector<int> s){ // para counting sort //O(n), n = |s|
-    vector<int> c (s.size()); //acoto: a lo sumo hay s.size() elementos distintos
+    vector<int> c (s.size(), 0); //acoto: a lo sumo hay s.size() elementos distintos
 
     for (int i = 0; i < s.size(); ++i) {
         c[s[i]]++;

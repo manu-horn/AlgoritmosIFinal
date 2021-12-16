@@ -106,12 +106,9 @@ void insert(vector<int>& s, int i){ //O(n)
 // bubble
 
 void bubbleSort(vector<int>& s){ //O(n^2)
-    for (int i = 0; i < s.size(); ++i) {
-        burbujeo(s,i);
-    }
-}
-void burbujeo(vector<int>& s, int i){ //O(n)
-    for (int j = s.size()-1; j > i ; --j) {
-        if (s[j] < s[j-1]) swap(s[j], s[j-1]);
+    for (int i = 0; i < s.size()-1; ++i) {
+        for(int j = 0; j < s.size()-1; ++j){
+            if(s[j] > s[j+1]) swap(s[j], s[j+1]);
+        }
     }
 }

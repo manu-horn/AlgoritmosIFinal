@@ -56,7 +56,7 @@ int posMaximoEnRango(vector<int> v, int low, int high){ // O(n), n = |v|
 }
 
 
-// counting
+// counting (pre: seq acotada por 0 y el max)
 
 int maximo(vector<int> v){ // O(n)
     int max = v[0];

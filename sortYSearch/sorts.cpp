@@ -58,27 +58,44 @@ int posMaximoEnRango(vector<int> v, int low, int high){ // O(n), n = |v|
 
 // counting
 
-vector<int> countingSort(vector<int> s){
-    vector<int> conteo = contarApariciones(s); // O(n)
-    vector<int> ordenado;
-
-    for (int i = 0; i < conteo.size() ; ++i) {
-        for (int j = 0; j < conteo[i]; ++j) {
-            ordenado.push_back(i);
-        }
+int maximo(vector<int> v){ // O(n)
+    int max = v[0];
+    
+    for(int i = 1; i < v.size(); i++){
+        if(v[i] > max) max = v[i];
     }
-
-    return ordenado;
+    
+    return max;
 }
 
 vector<int> contarApariciones (vector<int> s){ // para counting sort //O(n), n = |s|
-    vector<int> c (s.size(), 0); //acoto: a lo sumo hay s.size() elementos distintos
-
+    vector<int> c (maximo(s)+1, 0); //cota: max+1, size del vector conteo, que se sabe por la pre
     for (int i = 0; i < s.size(); ++i) {
         c[s[i]]++;
     }
 
     return c;
+}
+
+void reconstruir(vector<int>& lista, vector<int> conteo){ // O(n)
+    int indice_cont = 0;
+    
+    for(int i = 0; i < lista.size(); i++){
+        
+        while(conteo[indice_cont] == 0){
+            indice_cont++;
+        }
+        
+        lista[i] = indice_cont;
+        conteo[indice_cont]--;
+    }
+}
+
+vector<int> countingSort(vector<int> s){ // O(n)
+    vector<int> conteo = contarApariciones(s);
+    reconstruir(s, conteo);
+    
+    return s;
 }
 
 // selection

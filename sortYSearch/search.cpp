@@ -8,13 +8,11 @@
 // puedo devolver el índice o un bool que me diga si está o no
 
 bool linearSearch(int e, vector<int> s){
-    bool esta = false;
-
-    for (int i = 0; i < s.size() && !esta; ++i) {
-        if (s[i] == e) esta = true;
+    
+    for (int i = 0; i < s.size() && s[i]!= e; ++i) {
     }
 
-    return esta;
+    return i < s.size();
 }
 
 int binarySearch(int x, vector<int> v){

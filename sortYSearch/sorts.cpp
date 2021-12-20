@@ -4,34 +4,12 @@
 
 #include "sorts.h"
 
-// cocktail & cocktailShaker
+// cocktail
 
 void cocktailSort(vector<int>& v){ // O(n^2), n = |v|
     for (int i = 0; i < v.size()/2; ++i) {
         swap(v[i], v[posMinimoEnRango(v,i,v.size()-1-i)]);
         swap(v[v.size()-1-i], v[posMaximoEnRango(v, i, v.size()-1-i)]);
-    }
-}
-
-void cocktailShakerSort(vector<int>& v){
-    bool ordenada = false;
-
-    for (int i = 0; i < v.size() && !ordenada; ++i) {
-        ordenada = true;
-
-        for (int j = i; j < v.size()-1; ++j) {
-            if (v[j] >v[j+1]){
-                swap(v[j],v[j+1]);
-                ordenada = false;
-            }
-        }
-
-        for (int k = v.size()-1-i; k > 0 && !ordenada ; --k) {
-            if (v[k-1]> v[k]){
-                swap(v[k], v[k-1]);
-                ordenada = false;
-            }
-        }
     }
 }
 

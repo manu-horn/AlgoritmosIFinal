@@ -51,7 +51,8 @@ int jumpSearch(int x, vector<int> v){
         i += salto;
     }
 
-    if (i == 0) return -1;
+    if (v[0] == x) return 0;
+    else if (i == 0) return -1;
     else if (i < v.size()) m = i+1;
     else m = v.size();
 

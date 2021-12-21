@@ -111,3 +111,62 @@ bool contiene_KMP(string& t, string& p){
 
     return r-l == p.size();
 }
+
+// Algoritmo del final: O(n²) n = |a|
+
+vector<vector<int>> interseccion (vector<vector<int>> a, vector<vector<int>> b){
+    int i = 0,j = 0; bool esSub = true;
+    
+    while (j < a.size() && a[i][j] != b[i][j]) j++;
+    
+    if (j == a.size()) return {};
+    
+    int col = 0;
+    
+    while (i < a.size()){
+        while(col <= j){
+            esSub &= (a[i][a.size()-1-col] == b[i][a.size()-1-j-col]); 
+        }
+    }
+    
+    vector<vector<int>> c = {};
+    
+    if (esSub){
+        vector<int> h (a.size()-j, 0);
+        vector<vector<int>> c(a.size(), h);
+        for(int fil = 0; i < c.size(); i++){
+            for(int col = 0; col < c[0].size(); col++){
+                c[fil][col] = b[fil][col];
+            }
+        }
+    }
+    
+    return c;
+    
+}
+
+int main()
+{
+    vector<vector<int>> a = {
+        {1,2,4},
+        {3,6,1},
+        {1,4,7}
+    };
+    
+    vector<vector<int>> b = {
+        {2,4,6},
+        {6,1,2},
+        {4,7,1}
+    };
+    
+    vector<vector<int>> d = interseccion(a, b);
+    
+    for(int i = 0; i < d.size(); i++){
+        for(int j = 0; j < d[0].size(); j++){
+            cout << d[i][j] << " ";
+        }
+        cout << endl;
+    }
+
+    return 0;
+}

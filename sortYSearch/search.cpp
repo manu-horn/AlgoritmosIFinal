@@ -17,7 +17,7 @@ bool linearSearch(int x, vector<int> s){
     return (i < s.size());
 }
 
-int binarySearch(int x, vector<int> v){
+int binarySearch(int x, vector<int> v){ // devuelve índice de 1era aparición
     int low = 0, high = v.size()-1;
 
     while (low < high){
@@ -29,6 +29,23 @@ int binarySearch(int x, vector<int> v){
 
     if (v[low] == x) return low;
     else return -1;
+}
+
+int binarySearchLast(int x, vector<int> v){ // devuelve índice de ult aparición
+    int low = 0, high = v.size()-1, res = -1;
+
+    while (low < high){
+        int mid = (low + high)/2;
+        if (v[mid] > x) high = mid-1;
+        else if(v[mid] < x) low = mid+1;
+        else {
+            res = mid;
+            low = mid +1;
+        }
+    }
+    
+    if (v[low] == x) return low;
+    else return res;
 }
 
 int binarySearchRange (vector<int> v, int x, int from, int to){ // from y to son inclusives

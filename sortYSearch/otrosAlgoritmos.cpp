@@ -116,9 +116,12 @@ bool contiene_KMP(string& t, string& p){
 
 vector<vector<int>> interseccion (vector<vector<int>> a, vector<vector<int>> b){
     int i = 0,j = 0; bool esSub = true;
-    
-    while (j < a.size() && a[i][j] != b[i][j]) j++;
-    
+ 
+    while(i < a.size()){
+        while (j < a.size() && a[i][j] != b[i][j]) j++;
+        i++;
+    }
+    i = 0;
     if (j == a.size()) return {};
     
     int col = 0;

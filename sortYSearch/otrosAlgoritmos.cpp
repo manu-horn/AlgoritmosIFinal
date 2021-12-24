@@ -158,15 +158,17 @@ vector<vector<int>> interseccion (vector<vector<int>> a, vector<vector<int>> b){
 int main()
 {
     vector<vector<int>> a = {
-        {1,2,4},
-        {3,6,1},
-        {1,4,7}
+        {6,2,4,9},
+        {6,8,1,9},
+        {6,4,7,2},
+        {2,0,3,8}
     };
     
     vector<vector<int>> b = {
-        {2,4,6},
-        {6,1,2},
-        {4,7,1}
+        {2,4,9,0},
+        {8,1,9,2},
+        {4,7,2,1},
+        {0,3,8,7}
     };
     
     vector<vector<int>> d = interseccion(a, b);

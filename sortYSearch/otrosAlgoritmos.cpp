@@ -134,16 +134,21 @@ vector<vector<int>> interseccion (vector<vector<int>> a, vector<vector<int>> b){
         i++;
     }
     
-    vector<vector<int>> c = {};
-    
     if (esSub){
-        for(int fil = 0; fil < a.size(); fil++){
-            vector<int> h(0);
-            for(int col = 0; col < a.size()-j; col++){
-                h.push_back(b[fil][col]);
+        vector<int> h(a.size()-j,0);
+        vector<vector<int>> c(a.size(), h);
+        
+        for(int fil = 0; fil < c.size(); fil++){
+            for(int col = 0; col < c[0].size(); col++){
+                c[fil][col] = b[fil][col];
             }
-            c.push_back(h);
         }
+        
+        return c;
+        
+    } else {
+        vector<vector<int>> c(0);
+        return c;
     }
     
     return c;

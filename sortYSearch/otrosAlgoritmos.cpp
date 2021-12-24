@@ -118,7 +118,7 @@ vector<vector<int>> interseccion (vector<vector<int>> a, vector<vector<int>> b){
     int i = 0,j = 0; bool esSub = true;
  
     while(i < a.size()){ // CINDY: acá hay un error... quiero hallar a partir de qué j son iguales
-        while (j < a.size() && a[i][j] != b[i][j]) j++;
+        while (j < a.size() && a[i][j] != b[i][0]) j++;
         i++;
     }
     i = 0;

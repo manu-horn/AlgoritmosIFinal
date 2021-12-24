@@ -129,7 +129,9 @@ vector<vector<int>> interseccion (vector<vector<int>> a, vector<vector<int>> b){
     while (i < a.size()){
         while(col <= j){
             esSub &= (a[i][a.size()-1-col] == b[i][a.size()-1-j-col]); 
+            col++;
         }
+        i++;
     }
     
     vector<vector<int>> c = {};
